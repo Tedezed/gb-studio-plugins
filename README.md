@@ -5,7 +5,7 @@ This repository contains a collection of plugins for [GB Studio](https://www.gbs
 ## Available Plugins
 
 ### Multi Language Dialogue
-**Location:** `/Multi_Languaje_Dialogue`
+**Location:** `/Multi_Language_Dialogue`
 
 A plugin designed to simplify the implementation of multi-language dialogue systems in GB Studio, it replaces the original dialogue event, so you won't have to modify any events in your game; it also appears in the dialogue preview section.
 
@@ -18,7 +18,7 @@ A plugin designed to simplify the implementation of multi-language dialogue syst
 ## Installation
 
 1. Download this repository or the specific plugin folder.
-2. Place the plugin folder inside your GB Studio project's `plugins` directory (e.g., `your-project/plugins/Multi_Languaje_Dialogue`).
+2. Place the plugin folder inside your GB Studio project's `plugins` directory (e.g., `your-project/plugins/Multi_Language_Dialogue`).
 3. Reload your project in GB Studio.
 
 ## License
