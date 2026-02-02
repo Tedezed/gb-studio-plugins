@@ -7,7 +7,8 @@ This repository contains a collection of plugins for [GB Studio](https://www.gbs
 ### Multi Language Dialogue
 **Location:** `/Multi_Languaje_Dialogue`
 
-A plugin designed to simplify the implementation of multi-language dialogue systems in GB Studio.
+A plugin designed to simplify the implementation of multi-language dialogue systems in GB Studio, it replaces the original dialogue event, so you won't have to modify any events in your game; it also appears in the dialogue preview section.
+
 
 - **Type:** Events Plugin
 - **Author:** Tedezed
