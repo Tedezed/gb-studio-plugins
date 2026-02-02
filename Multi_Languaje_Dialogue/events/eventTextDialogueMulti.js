@@ -1,11 +1,17 @@
 const l10n = require("../helpers/l10n").default;
 
-const id = "EVENT_MULTI_LANG_DIALOGUE";
+const id = "EVENT_TEXT";
 const name = "Multi Languaje Dialogue";
-const groups = ["Plugin Pack", "Multi Languaje"];
+const groups = ["Plugin Pack", "Multi Languaje", "EVENT_GROUP_DIALOGUE"];
 
 const autoLabel = (fetchArg, args) => {
-    return "Multi-Language Dialogue";
+  if (([].concat(args.text) || []).join()) {
+    return l10n("EVENT_TEXT_LABEL", {
+      text: fetchArg("text"),
+    });
+  } else {
+    return l10n("EVENT_TEXT");
+  }
 };
 
 const fields = [
@@ -36,7 +42,7 @@ const fields = [
         ],
     },
     {
-        key: "text1",
+        key: "text",
         label: "Text (Value 1)",
         type: "textarea",
         placeholder: l10n("FIELD_TEXT_PLACEHOLDER"),
@@ -502,7 +508,7 @@ const userPresetsGroups = [
     {
         id: "text",
         label: l10n("FIELD_TEXT"),
-        fields: ["text1", "text2", "text3", "text4"],
+        fields: ["text", "text2", "text3", "text4"],
     },
     {
         id: "avatar",
@@ -574,7 +580,7 @@ const compile = (input, helpers) => {
     };
 
     ifVariableValue(input.languageVariable, ".EQ", 1, () => {
-        callDialogue(input.text1);
+        callDialogue(input.text);
     }, () => {
         ifVariableValue(input.languageVariable, ".EQ", 2, () => {
             callDialogue(input.text2);
@@ -605,7 +611,7 @@ module.exports = {
     userPresetsIgnore,
     helper: {
         type: "text",
-        text: "text1",
+        text: "text",
         avatarId: "avatarId",
         minHeight: "minHeight",
         maxHeight: "maxHeight",
