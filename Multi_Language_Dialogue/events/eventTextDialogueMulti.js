@@ -1,17 +1,17 @@
 const l10n = require("../helpers/l10n").default;
 
 const id = "EVENT_TEXT";
-const name = "Multi Languaje Dialogue";
-const groups = ["Plugin Pack", "Multi Languaje", "EVENT_GROUP_DIALOGUE"];
+const name = "Multi Language Dialogue";
+const groups = ["Plugin Pack", "Multi Language", "EVENT_GROUP_DIALOGUE"];
 
 const autoLabel = (fetchArg, args) => {
-  if (([].concat(args.text) || []).join()) {
-    return l10n("EVENT_TEXT_LABEL", {
-      text: fetchArg("text"),
-    });
-  } else {
-    return l10n("EVENT_TEXT");
-  }
+    if (([].concat(args.text) || []).join()) {
+        return l10n("EVENT_TEXT_LABEL", {
+            text: fetchArg("text"),
+        });
+    } else {
+        return l10n("EVENT_TEXT");
+    }
 };
 
 const fields = [
@@ -579,21 +579,35 @@ const compile = (input, helpers) => {
         );
     };
 
-    ifVariableValue(input.languageVariable, ".EQ", 1, () => {
-        callDialogue(input.text);
-    }, () => {
-        ifVariableValue(input.languageVariable, ".EQ", 2, () => {
-            callDialogue(input.text2);
+    // Validate that languageVariable exists and is within valid range (1-4)
+    if (input.languageVariable === undefined || input.languageVariable === null) {
+        callDialogue("ERRMLD1: Define VAR");
+    } else {
+        ifVariableValue(input.languageVariable, ".LT", 1, () => {
+            callDialogue("ERRMLD2: VAR < 1");
         }, () => {
-            ifVariableValue(input.languageVariable, ".EQ", 3, () => {
-                callDialogue(input.text3);
+            ifVariableValue(input.languageVariable, ".GT", 4, () => {
+                callDialogue("ERRMLD3: VAR > 4");
             }, () => {
-                ifVariableValue(input.languageVariable, ".EQ", 4, () => {
-                    callDialogue(input.text4);
+                // Variable is valid (1-4), proceed with language selection
+                ifVariableValue(input.languageVariable, ".EQ", 1, () => {
+                    callDialogue(input.text);
+                }, () => {
+                    ifVariableValue(input.languageVariable, ".EQ", 2, () => {
+                        callDialogue(input.text2);
+                    }, () => {
+                        ifVariableValue(input.languageVariable, ".EQ", 3, () => {
+                            callDialogue(input.text3);
+                        }, () => {
+                            ifVariableValue(input.languageVariable, ".EQ", 4, () => {
+                                callDialogue(input.text4);
+                            });
+                        });
+                    });
                 });
             });
         });
-    });
+    }
 };
 
 
