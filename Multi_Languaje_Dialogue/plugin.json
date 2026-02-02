@@ -1,0 +1,14 @@
+{
+  "type": "eventsPlugin",
+  "name": "Multi Language Dialogue",
+  "author": "Tedezed",
+  "url": "https://tomo666.github.io/gamedevlab/category/plugins",
+  "description": "Multi-Language dialogue event",
+  "images": [
+    "screenshots/show_case.png",
+    "screenshots/test_scene.png"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "gbsVersion": ">=4.2.0"
+}
