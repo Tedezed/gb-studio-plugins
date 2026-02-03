@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "fb2ffff2-09ee-40cb-97fa-6c0d1fa48d39",
-  "_index": 2,
+  "_index": 1,
   "name": "dialoge_example",
   "backgroundId": "dfac25f3-d947-4e03-9f49-b01589f4278b",
   "tilesetId": "",
@@ -259,7 +259,7 @@
         },
         "y": {
           "type": "number",
-          "value": 0
+          "value": 17
         },
         "direction": "",
         "fadeSpeed": "2"

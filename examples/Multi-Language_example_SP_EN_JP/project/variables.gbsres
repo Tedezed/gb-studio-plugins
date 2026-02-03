@@ -3,8 +3,8 @@
   "variables": [
     {
       "id": "0",
-      "name": "Vida",
-      "symbol": "var_vida"
+      "name": "Health",
+      "symbol": "var_health"
     },
     {
       "id": "1",

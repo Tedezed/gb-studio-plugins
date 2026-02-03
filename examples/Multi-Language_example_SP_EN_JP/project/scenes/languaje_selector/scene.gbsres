@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "c649a7cf-e4f7-4f4d-87cc-8902d8f12462",
-  "_index": 1,
+  "_index": 0,
   "name": "languaje_selector",
   "backgroundId": "dfac25f3-d947-4e03-9f49-b01589f4278b",
   "tilesetId": "",
@@ -45,7 +45,7 @@
         },
         "y": {
           "type": "number",
-          "value": 0
+          "value": 17
         },
         "direction": "",
         "fadeSpeed": "2"
@@ -55,5 +55,6 @@
   ],
   "playerHit1Script": [],
   "playerHit2Script": [],
-  "playerHit3Script": []
+  "playerHit3Script": [],
+  "playerSpriteSheetId": "daf95270-e30d-423b-9ee7-990ae29f57f6"
 }
