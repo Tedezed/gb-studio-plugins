@@ -2,7 +2,7 @@
   "type": "eventsPlugin",
   "name": "Multi Language Text",
   "author": "Tedezed",
-  "url": "https://www.aventurabinaria.es",
+  "url": "https://github.com/Tedezed/gb-studio-plugins",
   "description": "Multi-Language text events",
   "images": [
     "screenshots/show_case.png",
