@@ -1,3 +1,8 @@
+/*
+* Author: Tedezed
+* Multi Language Dialogue based on source code of GB Studio
+*/
+
 const l10n = require("../helpers/l10n").default;
 
 const id = "EVENT_TEXT";
@@ -43,7 +48,7 @@ const fields = [
     },
     {
         key: "text",
-        label: "Text (Value 1)",
+        label: "Text Value Language 1",
         type: "textarea",
         placeholder: l10n("FIELD_TEXT_PLACEHOLDER"),
         multiple: true,
@@ -58,7 +63,7 @@ const fields = [
     },
     {
         key: "text2",
-        label: "Text (Value 2)",
+        label: "Text Value Language 2",
         type: "textarea",
         placeholder: l10n("FIELD_TEXT_PLACEHOLDER"),
         multiple: true,
@@ -73,7 +78,7 @@ const fields = [
     },
     {
         key: "text3",
-        label: "Text (Value 3)",
+        label: "Text Value Language 3",
         type: "textarea",
         placeholder: l10n("FIELD_TEXT_PLACEHOLDER"),
         multiple: true,
@@ -88,7 +93,7 @@ const fields = [
     },
     {
         key: "text4",
-        label: "Text (Value 4)",
+        label: "Text Value Language 4",
         type: "textarea",
         placeholder: l10n("FIELD_TEXT_PLACEHOLDER"),
         multiple: true,
@@ -581,26 +586,29 @@ const compile = (input, helpers) => {
 
     // Validate that languageVariable exists and is within valid range (1-4)
     if (input.languageVariable === undefined || input.languageVariable === null) {
-        callDialogue("ERRMLD1: Define VAR");
+        // ERROR Multi Language Dialogue 1: Define VAR
+        callDialogue("ERMLD1: " + input.text);
     } else {
         ifVariableValue(input.languageVariable, ".LT", 1, () => {
-            callDialogue("ERRMLD2: VAR < 1");
+            // ERROR Multi Language Dialogue 2: VAR < 1
+            callDialogue("ERMLD2: " + input.text);
         }, () => {
             ifVariableValue(input.languageVariable, ".GT", 4, () => {
-                callDialogue("ERRMLD3: VAR > 4");
+                // ERROR Multi Language Dialogue 3: VAR > 4
+                callDialogue("ERMLD3: " + input.text);
             }, () => {
                 // Variable is valid (1-4), proceed with language selection
                 ifVariableValue(input.languageVariable, ".EQ", 1, () => {
-                    callDialogue(input.text);
+                    callDialogue(input.text || "");
                 }, () => {
                     ifVariableValue(input.languageVariable, ".EQ", 2, () => {
-                        callDialogue(input.text2);
+                        callDialogue(input.text2 || "");
                     }, () => {
                         ifVariableValue(input.languageVariable, ".EQ", 3, () => {
-                            callDialogue(input.text3);
+                            callDialogue(input.text3 || "");
                         }, () => {
                             ifVariableValue(input.languageVariable, ".EQ", 4, () => {
-                                callDialogue(input.text4);
+                                callDialogue(input.text4 || "");
                             });
                         });
                     });

@@ -1,9 +1,9 @@
 {
   "type": "eventsPlugin",
-  "name": "Multi Language Dialogue",
+  "name": "Multi Language Text",
   "author": "Tedezed",
-  "url": "https://tomo666.github.io/gamedevlab/category/plugins",
-  "description": "Multi-Language dialogue event",
+  "url": "https://www.aventurabinaria.es",
+  "description": "Multi-Language text events",
   "images": [
     "screenshots/show_case.png",
     "screenshots/test_scene.png"

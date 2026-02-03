@@ -1,0 +1,273 @@
+{
+  "_resourceType": "scene",
+  "id": "fb2ffff2-09ee-40cb-97fa-6c0d1fa48d39",
+  "_index": 2,
+  "name": "dialoge_example",
+  "backgroundId": "dfac25f3-d947-4e03-9f49-b01589f4278b",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "TOPDOWN",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_3",
+  "x": 728,
+  "y": 264,
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Hola"
+        ],
+        "__section": "text",
+        "text2": [
+          "Hello"
+        ],
+        "text3": [
+          "こんにちは"
+        ],
+        "text4": [
+          ""
+        ],
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "languageVariable": "1"
+      },
+      "id": "a0abb8d6-8e1b-44d7-8abd-547df6b20126"
+    },
+    {
+      "command": "EVENT_MENU_MULTI",
+      "args": {
+        "variable": "0",
+        "items": 2,
+        "option1": "Vida en 1",
+        "option1_lang2": "Health in 1",
+        "option1_lang3": "健康1",
+        "option1_lang4": "",
+        "option2": "Vida en 2",
+        "option2_lang2": "Health in 2",
+        "option2_lang3": "健康2",
+        "option2_lang4": "",
+        "option3": "",
+        "option3_lang2": "",
+        "option3_lang3": "",
+        "option3_lang4": "",
+        "option4": "",
+        "option4_lang2": "",
+        "option4_lang3": "",
+        "option4_lang4": "",
+        "option5": "",
+        "option5_lang2": "",
+        "option5_lang3": "",
+        "option5_lang4": "",
+        "option6": "",
+        "option6_lang2": "",
+        "option6_lang3": "",
+        "option6_lang4": "",
+        "option7": "",
+        "option7_lang2": "",
+        "option7_lang3": "",
+        "option7_lang4": "",
+        "option8": "",
+        "option8_lang2": "",
+        "option8_lang3": "",
+        "option8_lang4": "",
+        "cancelOnB": true,
+        "layout": "dialogue",
+        "cancelOnLastOption": false,
+        "languageVariable": "1"
+      },
+      "id": "02a25c36-bc20-4b5f-a11f-baab18ca7033"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Vida es 1"
+              ],
+              "__section": "text",
+              "text2": [
+                "Health is 1"
+              ],
+              "text3": [
+                "体力は1"
+              ],
+              "text4": "",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30,
+              "languageVariable": "1"
+            },
+            "id": "b2468326-56d3-4a53-8b73-11cc77769f7f"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Vida es 2"
+              ],
+              "__section": "text",
+              "text2": [
+                "Health is 2"
+              ],
+              "text3": [
+                "体力は2"
+              ],
+              "text4": "",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30,
+              "languageVariable": "1"
+            },
+            "id": "0a80cb77-edc7-4980-9085-89e10594f4b9"
+          }
+        ]
+      },
+      "id": "ba7a5d24-d2b7-4979-84c4-bc9fe8f8d94f"
+    },
+    {
+      "command": "EVENT_TEXT_DRAW_MULTI",
+      "args": {
+        "text": "Vida $00$",
+        "text2": "Health $00$",
+        "text3": "健康 $00$",
+        "text4": "",
+        "x": 1,
+        "y": 1,
+        "location": "background",
+        "languageVariable": "1"
+      },
+      "id": "06006734-96fd-4b8e-825e-399873922276"
+    },
+    {
+      "command": "EVENT_CHOICE_MULTI",
+      "args": {
+        "variable": "L0",
+        "trueText": "Poner true",
+        "falseText": "Poner false",
+        "trueText_lang2": "Set true",
+        "falseText_lang2": "Set false",
+        "trueText_lang3": "セット true",
+        "falseText_lang3": "セット false",
+        "trueText_lang4": "",
+        "falseText_lang4": "",
+        "languageVariable": "1"
+      },
+      "id": "f0029a12-d544-49dd-9b47-fb4e623e0ca3"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Local 0 es $L0$"
+        ],
+        "__section": "text",
+        "text2": [
+          "Local 0 is $L0$"
+        ],
+        "text3": [
+          "Local 0 は $L0$"
+        ],
+        "text4": "",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "languageVariable": "1"
+      },
+      "id": "6b365d25-264f-47fd-937c-e8d73e79f971"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "c649a7cf-e4f7-4f4d-87cc-8902d8f12462",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "32bb8de7-a578-4d50-8562-32e2e84f5ed9"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

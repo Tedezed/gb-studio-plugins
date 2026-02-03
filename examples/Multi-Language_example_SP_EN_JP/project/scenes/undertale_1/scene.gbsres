@@ -1,0 +1,105 @@
+{
+  "_resourceType": "scene",
+  "id": "a1e0b789-0ffd-45c3-ad7d-720b65a513af",
+  "_index": 0,
+  "name": "Undertale 1",
+  "backgroundId": "dfac25f3-d947-4e03-9f49-b01589f4278b",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "PLATFORM",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00140+0f14+0014+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_2",
+  "x": 456,
+  "y": 48,
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "0",
+        "value": {
+          "type": "number",
+          "value": 9
+        },
+        "__collapse": false
+      },
+      "id": "91f7dc3c-f8bf-4839-bb0f-b7c825572a74"
+    },
+    {
+      "command": "EVENT_TEXT_DRAW",
+      "args": {
+        "text": "$00$",
+        "x": 1,
+        "y": 1,
+        "location": "background",
+        "__collapse": false
+      },
+      "id": "0a99b7e9-37d9-4269-88a8-427d9dfdb1f4"
+    }
+  ],
+  "playerHit1Script": [
+    {
+      "command": "EVENT_DEC_VALUE",
+      "args": {
+        "variable": "0"
+      },
+      "id": "4fd79eae-e1b1-4d1d-8365-4110a9a10389"
+    },
+    {
+      "command": "EVENT_TEXT_DRAW",
+      "args": {
+        "text": "$00$",
+        "x": 1,
+        "y": 1,
+        "location": "background"
+      },
+      "id": "8b9c028f-cf0e-4588-af27-efc2ee1541df"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "a1e0b789-0ffd-45c3-ad7d-720b65a513af",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 15
+              },
+              "direction": "right",
+              "fadeSpeed": "2"
+            },
+            "id": "091b064d-c91a-47e7-a9ee-2bf8b41318be"
+          }
+        ],
+        "false": []
+      },
+      "id": "29a7319a-5577-427e-97b9-bc22a5543b6b"
+    }
+  ],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}
