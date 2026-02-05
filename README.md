@@ -10,8 +10,8 @@ This repository contains a collection of plugins for [GB Studio](https://www.gbs
 - **Author:** Tedezed
 - **GB Studio Version:** >= 4.2.0
 - **License:** MIT
-- **Tutorial:** https://itch.io/blog/1346238/tutorial-gb-studio-multi-language-with-plugin
-- **Project example:** https://github.com/Tedezed/gb-studio-plugins/tree/main/examples/Multi-Language_example_SP_EN_JP
+- **[Tutorial](https://itch.io/blog/1346238/tutorial-gb-studio-multi-language-with-plugin)**
+- **[Project example](https://github.com/Tedezed/gb-studio-plugins/tree/main/examples/Multi-Language_example_SP_EN_JP)**
 
 A plugin designed to simplify the implementation of multi-language text systems in GB Studio:
  - `eventTextDialogueMulti` replaces the original dialogue event, so you won't have to modify any events in your game; it also appears in the dialogue preview section.
